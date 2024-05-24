@@ -46,8 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         }
     }
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -116,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         </div>
 
         <div class="flex justify-end pr-20 p-4 ">
-            <button onClick="addItem()" class="bg-blue-800 px-2 text-white rounded border-0" name="submit">Add
+            <button onClick="addItem()" class="bg-blue-800 px-2 mx-2 text-white rounded border-0" name="submit">Add
                 Item</button>
             <button type="submit" class="bg-green-800 px-2 text-white rounded border-0" name="submit">Save
                 Items</button>

@@ -64,7 +64,7 @@
 
         </div>
 
-        <?php include "completedprojects.php" ?>
+        <?php include "completedprojects.php" ?> 
         <!-- projects start  -->
         
 
