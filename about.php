@@ -13,13 +13,13 @@ if ($result->num_rows > 0) {
 <html lang="en">
 
 <head>
-<?php include("head.php");  ?>
+    <?php include ("head.php"); ?>
     <title>INDOKASH | ABOUT US</title>
 </head>
 
 <body class="flex flex-col">
-    <?php include("preloader.php"); ?>
-    <?php include("navBar.php"); ?>
+    <?php include ("preloader.php"); ?>
+    <?php include ("navBar.php"); ?>
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
@@ -34,23 +34,20 @@ if ($result->num_rows > 0) {
 
     <!-- ##### About Area Start ##### -->
 
-            <div class="w-full -mt-4 mx-4 w-screen">
-                <div class="col-12 col-lg-12  py-4 " >
-                <div class="section-heading text-white">
+    <div class="w-full -mt-4 mx-4 w-screen">
+        <div class="col-12 col-lg-12  py-4 ">
+            <div class="section-heading text-white">
                 <?php echo $about_us; ?>
-                </div>
-            </div>
-                <?php include("qualityControl.php");  ?>
             </div>
         </div>
+        <?php include ("qualityControl.php"); ?>
+    </div>
+    </div>
     <!-- ##### About Area End ##### -->
     <!-- ##### Service Area Start ##### -->
-    <?php include("ourservices.php");  ?>
-    
+    <?php include ("ourservices.php"); ?>
+
     <!-- ##### Service Area End ##### -->
-
-
-
     <?php include 'footer.php'; ?>
     <?php include 'scripts.php'; ?>
 </body>

@@ -1,4 +1,5 @@
 <?php include("./dbConnection.php");  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +13,10 @@
     <?php include("preloader.php"); ?>
     <?php include("navBar.php"); ?>
     <?php include("carousal.php"); ?>
+   <div class="mx-auto">
     <?php include("whyIndokash.php"); ?>
     <?php include("serviceintro.php"); ?>
+    </div>
     <?php include "contactForm.php"; ?>
     <?php include 'footer.php'; ?>
     <?php include 'scripts.php'; ?>

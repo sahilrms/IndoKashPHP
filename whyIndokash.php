@@ -1,6 +1,6 @@
 <section class="about-us-area bg-gray-50">
     <div class="container">
-        <div class="row justify-content-between w-screen lg:-ml-16">
+        <div class="row justify-content-between w-screen ">
             <div style=" background-image: url(./img/core-img/apple2.jpg); background-size: cover;">
                 <!-- Section Heading -->
                 <div class="section-heading">

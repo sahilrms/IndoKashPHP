@@ -11,10 +11,21 @@
     <?php include("navBar.php"); ?>
     <?php include("galleryBreadCrumb.php");  ?>
     <div class="flex flex-wrap justify-center gap-4 p-5 bg-green-700">
-        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1" class="w-48 h-48 object-cover cursor-pointer transform transition-transform hover:scale-105" onclick="openModal(this)">
-        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2" class="w-48 h-48 object-cover cursor-pointer transform transition-transform hover:scale-105" onclick="openModal(this)">
-        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3" class="w-48 h-48 object-cover cursor-pointer transform transition-transform hover:scale-105" onclick="openModal(this)">
-        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4" class="w-48 h-48 object-cover cursor-pointer transform transition-transform hover:scale-105" onclick="openModal(this)">
+        <?php
+            include "./dbConnection.php";
+            $sql = "SELECT * FROM gallery";
+            $result = mysqli_query($conn, $sql);
+        
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <img src="<?php echo preg_replace('/^\.\.\//', '', $row['img_link']); ?>" onclick="openModal(this)">
+                    <?php
+                }
+            } else {
+                echo "No Images in gallery found.";
+            }
+        ?>
     </div>
 
     <div id="modal" class="modal hidden fixed z-10 top-0 left-0 w-full h-full overflow-auto bg-black bg-opacity-80">

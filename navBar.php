@@ -58,8 +58,9 @@
                                 <li><a class="anchor-style" href="about.php">About</a></li>
                                 <li><a class="anchor-style" href="./ourteam.php">Our Management</a></li>
                                 <li><a class="anchor-style" href="portfolio.php">Our Projects</a></li>
-                                <li><a class="anchor-style" href="shop.html">Shop</a></li>
-                                <li><a class="anchor-style" href="contact.html">Contact</a></li>
+                                <li><a class="anchor-style" href="gallery.php">Gallery</a></li>
+                                <li><a class="anchor-style" href="shop.php">Shop</a></li>
+                                <li><a class="anchor-style" href="contact.php">Contact</a></li>
                             </ul>
                         </div>
                         <!-- Navbar End -->
